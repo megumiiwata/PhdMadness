@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 9513c7f7dfd9f46d8801c919632133c6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: area5_road
+    100002: Cube_001
+    100004: Hemi
+    100006: Kirkkokatu_15_001
+    100008: Kirkkokatu_17
+    100010: Kirkkokatu_8
+    100012: rotuaari-stage_002
+    100014: //RootNode
+    100016: Sun
+    100018: Sun_001
+    400000: area5_road
+    400002: Cube_001
+    400004: Hemi
+    400006: Kirkkokatu_15_001
+    400008: Kirkkokatu_17
+    400010: Kirkkokatu_8
+    400012: rotuaari-stage_002
+    400014: //RootNode
+    400016: Sun
+    400018: Sun_001
+    2100000: stage_screen_metal
+    2100002: stage_gray_granith
+    2100004: red_granith
+    2100006: stage_darkg_granith
+    2100008: glass
+    2100010: red_granith_wet
+    2100012: stage_scaffold_mat_001
+    2100014: kirkko_17_windows_6_001
+    2100016: pakka_12_roof_000
+    2100018: kirkko_17_w_frames
+    2100020: kirkko_17_mirror
+    2100022: kirkko_17_mirror_2_001
+    2100024: kirkk_chimney_001
+    2100026: concrete-stucco_001
+    2100028: kirkko_17_doors
+    2100030: metallic_brown
+    2100032: kirk_17_eaves_001
+    2100034: con_stucco_brown_001
+    2100036: kirkk_roof_dn_001
+    2100038: kapp_13_wall_l_001
+    2100040: pakka_14-16_roof-1_001
+    2100042: kapp_13_wall_l_b_001
+    2100044: kapp_13_window_4_001
+    2100046: kapp_13_window_C_001
+    2100048: kapp_13_window_B_001
+    2100050: kapp_13_window_sky_7_001
+    2100052: halli_sky_003
+    2100054: kaupp_13_details_001
+    2100056: pakka_12_stone_f-5_001
+    2100058: kapp_13_wall_f_1_d_001
+    2100060: kapp_13_window_sky_5_001
+    2100062: kaup_11_wall-r-c-1_001
+    2100064: kirkk_30_allwin_001
+    2100066: kirkk_30_scaff_001
+    2100068: kaup_11_wall-r-2_001
+    2100070: kaup_11_wall-r-b_001
+    2100072: kaup_11_wall-f-1_001
+    2100074: kaup_11_roof-1_001
+    2100076: kaup_11_roof_001
+    2100078: signages_bar-2_001
+    2100080: pakka_14-16_atlas_001
+    2100082: pakka_14-16_wall-f-2_001
+    2100084: pakka_14_wall-l-1_001
+    2100086: pakka_14-16_wall-f1_001
+    2100088: pakka_14-16_flr_001
+    2100090: pakka_14-16_l-g3_001
+    2100092: pakka_14-16_glass-r-2_001
+    2100094: pakka_14-16_wall-f-3_001
+    2100096: pakka_14-16_gate-1_001
+    2100098: pakka_14-16_wf-5_001
+    2100100: pakka_14-16_la_001
+    2100102: pakka_14-16_can_fra_001
+    2100104: pakka_14-16_wall_rear_001
+    2100106: pakka_14-16_w-a_001
+    2100108: pakka_14-16_glass-r_001
+    2100110: pakka_14-16_wf-3_000
+    2100112: pakka_14-16_can_rf-1_001
+    2100114: pakka_14-16_ceil_001
+    2100116: pakka_14-16_wall-f3_001
+    2100118: grey_metal
+    2100120: coffeeHouse
+    2100122: pakka_12_wall_r-3_001
+    2100124: pakka_12_ent_001
+    2100126: pakka_12_door_c_001
+    2100128: conc_stucco_lightorange_001
+    2100130: pakka_12_stone_f-6_001
+    2100132: pakka_12_sinages_001
+    2100134: pakka_12_door21_001
+    2100136: pakka_12_wall_r-2_001
+    2100138: pakka_12_details1_001
+    2100140: pakka_12_wndw_up_001
+    2100142: pakka_12_wndw_1dn_001
+    2100144: pakka_12_signage12_002
+    2100146: pakka_12_door2_001
+    2100148: pakka_12_stone_f-3_001
+    2100150: pakka_12_chimney-1_001
+    2100152: NewCOBBLESTONE
+    2100154: rotuaari_tile
+    2300000: area5_road
+    2300002: Cube_001
+    2300004: Kirkkokatu_15_001
+    2300006: Kirkkokatu_17
+    2300008: Kirkkokatu_8
+    2300010: rotuaari-stage_002
+    3300000: area5_road
+    3300002: Cube_001
+    3300004: Kirkkokatu_15_001
+    3300006: Kirkkokatu_17
+    3300008: Kirkkokatu_8
+    3300010: rotuaari-stage_002
+    4300000: rotuaari-stage_002
+    4300002: Kirkkokatu_17
+    4300004: Kirkkokatu_15_001
+    4300006: Kirkkokatu_8
+    4300008: Cube_001
+    4300010: area5_road
+    10800000: Sun
+    10800002: Sun_001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
