@@ -11,10 +11,12 @@ using UnityEngine;
 public class WebInput : MonoBehaviour
 {
     public int windIntensity;
+    public int windSources;
 
     private void Start()
     {
         windIntensity = 0;
+        windSources = 0;
     }
 
 

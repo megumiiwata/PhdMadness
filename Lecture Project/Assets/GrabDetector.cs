@@ -5,10 +5,16 @@ using UnityEngine;
 public class GrabDetector : MonoBehaviour
 {
     public GameObject RightControllerAnchor;
+    public float grabTimer;
+    float nextGrabTime;
+    float startGrabTime;
     bool GrabIsPossible;
     bool IsGrabbing;
+    GameObject OldParent;
     GameObject CurrentlyGrabbedObject;
     GameObject GrabObjectCandidate;
+    Material paperMat;
+    Animator paperAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,30 +25,42 @@ public class GrabDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(GrabIsPossible && !IsGrabbing)
-        {
-            Debug.Log("Grab Possible");
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) > .9)
-            {
-                Debug.Log("Grab durchgef�hrt");
-                IsGrabbing = true;
-                CurrentlyGrabbedObject = GrabObjectCandidate;
-                CurrentlyGrabbedObject.transform.SetParent(RightControllerAnchor.transform);
-                CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 0;
-            }
-        }
-
         if(IsGrabbing)
         {
-            if(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) <= .9)
+            paperMat.SetColor("_Color", new Color(1, 1, 1, 1 - Mathf.InverseLerp(startGrabTime, nextGrabTime, Time.time)));
+            if(Time.time >= nextGrabTime)
             {
                 IsGrabbing = false;
-                CurrentlyGrabbedObject.transform.SetParent(null);
-                CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 1;
-                CurrentlyGrabbedObject = null;
+                CurrentlyGrabbedObject.transform.SetParent(OldParent.transform);
+                Destroy(CurrentlyGrabbedObject.transform.parent.gameObject);
+                //CurrentlyGrabbedObject = null;
+            }
+            if(Input.GetAxis("Fire1") == 0)
+            {
+                //IsGrabbing = false;
+                //CurrentlyGrabbedObject.transform.SetParent(null);
+                //paperAnimator = null;
+                //CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 1;
+                //CurrentlyGrabbedObject = null;
             }
         }
+
+        //else if (GrabIsPossible && !IsGrabbing)
+        //{
+        //    if (Input.GetAxis("Fire1") == 1)
+        //    {
+
+        //        IsGrabbing = true;
+        //        CurrentlyGrabbedObject = GrabObjectCandidate;
+        //        Vector3 worldPos = CurrentlyGrabbedObject.transform.position;
+        //        CurrentlyGrabbedObject.transform.SetParent(RightControllerAnchor.transform);
+        //        CurrentlyGrabbedObject.transform.position = worldPos;
+        //        CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 0;
+        //        SetupAnimation();
+        //        nextGrabTime = Time.time + grabTimer;
+        //        startGrabTime = Time.time;
+        //    }
+        //}
 
 
 
@@ -50,18 +68,36 @@ public class GrabDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Paper") && CurrentlyGrabbedObject == null)
+        if(other.CompareTag("Paper") && !IsGrabbing)
         {
-            GrabIsPossible = true;
-            GrabObjectCandidate = other.gameObject;
+            //GrabIsPossible = true;
+            //GrabObjectCandidate = other.gameObject;
+
+            IsGrabbing = true;
+            CurrentlyGrabbedObject = other.gameObject;
+            Vector3 worldPos = CurrentlyGrabbedObject.transform.position;
+            OldParent = CurrentlyGrabbedObject.transform.parent.gameObject;
+            CurrentlyGrabbedObject.transform.SetParent(RightControllerAnchor.transform);
+            CurrentlyGrabbedObject.transform.position = worldPos;
+            //CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 0;
+            SetupAnimation();
+            nextGrabTime = Time.time + grabTimer;
+            startGrabTime = Time.time;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("Paper"))
+    //    {
+    //        GrabIsPossible = false;
+    //    }
+    //}
+
+    private void SetupAnimation()
     {
-        if (other.CompareTag("Paper"))
-        {
-            GrabIsPossible = false;
-        }
+        paperAnimator = CurrentlyGrabbedObject.GetComponentInChildren<Animator>();
+        paperAnimator.SetTrigger("stopMovement");
+        paperMat = CurrentlyGrabbedObject.GetComponentInChildren<SkinnedMeshRenderer>().material;
     }
 }

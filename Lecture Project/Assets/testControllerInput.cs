@@ -14,11 +14,11 @@ public class testControllerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > .9 || Input.GetAxis("Fire1") == 1)
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) > .9 || Input.GetAxis("Fire1") == 1)
         {
             Object.SetActive(true);
         }
-        else if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) <= .9 || Input.GetAxis("Fire1") == 0)
+        else if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) <= .9 || Input.GetAxis("Fire1") == 0)
         {
             Object.SetActive(false);
         }

@@ -132,8 +132,10 @@ public class Unity2ServerSocketIO : MonoBehaviour {
         //string windIntensity = normalizeIncJsonString(e.data.GetField("wind_intensity").ToString());
         //string windIntensity = normalizeIncJsonString(e.data.GetField("wind_intensity").ToString());
         int windIntensity = int.Parse(normalizeIncJsonString(e.data.GetField("wind_intensity").ToString()));
+        int windSources = int.Parse(normalizeIncJsonString(e.data.GetField("wind_sources").ToString()));
         //Debug.Log("wind intensity update: " + windIntensity);
         webInput.windIntensity = windIntensity;
+        webInput.windSources = windSources;
         //webInput.windIntensity = Mathf.Clamp(windIntensity, 0, 200);    // restrict input within range between 0 and 200
     }
 

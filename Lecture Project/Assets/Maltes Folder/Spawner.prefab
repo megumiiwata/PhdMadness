@@ -43,7 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7686ce322395365498f67bf6715c4572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaperPrefab: {fileID: 6196804147511408027, guid: 6826b60ae1bf5d34784bf5f0afb642d4,
+  PaperPrefab: {fileID: 3105262911404201963, guid: 87445f31edba54752be3ffe0f7062c35,
     type: 3}
   PaperSpawnAnchor: {fileID: 0}
-  SpawnTimer: 2
+  web: {fileID: 0}
+  SpawnTimer: 5
+  longTimer: 5
+  shortTimer: 0.1
