@@ -18,7 +18,7 @@ public class AnimatorWindReact : MonoBehaviour
     {
         if(web)
         {
-            animationSpeed = map(web.windIntensity, 0f, 250f, 0.3f, 1.2f);
+            animationSpeed = map(web.windIntensity, 0f, 250f, 0.1f, 1.2f);
             animator.speed = animationSpeed;
             Debug.Log(animationSpeed);
 

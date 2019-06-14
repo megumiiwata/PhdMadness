@@ -25,6 +25,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a653a19dad10b24194c9d870bb798bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  web: {fileID: 0}
+  animationSpeed: 0
 --- !u!1 &3105262911404201963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,15 +5003,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 0ef963fdb7f17489991aa4f2f9987245, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 0ef963fdb7f17489991aa4f2f9987245, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 0ef963fdb7f17489991aa4f2f9987245, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0ef963fdb7f17489991aa4f2f9987245, type: 3}
       propertyPath: m_Controller

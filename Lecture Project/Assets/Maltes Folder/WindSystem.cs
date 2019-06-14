@@ -7,6 +7,7 @@ public class WindSystem : MonoBehaviour
     public GameObject PaperPrefab;
     public Transform PaperSpawnAnchor;
     public WebInput web;
+    public AudioSource paperSound;
     public float SpawnTimer = 5f;
     public float longTimer = 5f;
     public float shortTimer = .1f;
@@ -43,6 +44,7 @@ public class WindSystem : MonoBehaviour
         NewPaper.transform.rotation = SpawnRotation;
         NewPaper.transform.position = PaperSpawnAnchor.position;
         NewPaper.GetComponentInChildren<AnimatorWindReact>().web = web;
+        paperSound.Play();
     }
 
     float map(float value, float low1, float high1, float low2, float high2)

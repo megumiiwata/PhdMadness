@@ -6,6 +6,7 @@ public class GrabDetector : MonoBehaviour
 {
     public GameObject RightControllerAnchor;
     public float grabTimer;
+    public AudioSource grabSound;
     float nextGrabTime;
     float startGrabTime;
     bool GrabIsPossible;
@@ -76,13 +77,14 @@ public class GrabDetector : MonoBehaviour
             IsGrabbing = true;
             CurrentlyGrabbedObject = other.gameObject;
             Vector3 worldPos = CurrentlyGrabbedObject.transform.position;
+            Quaternion worldRot = CurrentlyGrabbedObject.transform.rotation;
             OldParent = CurrentlyGrabbedObject.transform.parent.gameObject;
-            CurrentlyGrabbedObject.transform.SetParent(RightControllerAnchor.transform);
-            CurrentlyGrabbedObject.transform.position = worldPos;
+            CurrentlyGrabbedObject.transform.SetParent(RightControllerAnchor.transform, true);
             //CurrentlyGrabbedObject.GetComponent<PaperMovementTest>().MoveSpeed = 0;
             SetupAnimation();
             nextGrabTime = Time.time + grabTimer;
             startGrabTime = Time.time;
+            grabSound.Play();
         }
     }
 
